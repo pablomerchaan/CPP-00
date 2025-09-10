@@ -4,17 +4,19 @@
 
 int	main()
 {
-	Phonebook Phonebook;
-	std::string str;
+	Phonebook	phonebook;
+	std::string command;
 
-	str = "EXIT";
-	phonebook.i = 0;
-	while (strcmp(std::cin, str))
+	while (true)
 	{
-		if (!(strcmp(std::cin, "ADD")))
-			phonebook.addcontact();
-		else if (!(strcmp(std::cin, "SEARCH")))
-			phonebook.searchcontact();
+		if (!getline(std::cin, command))
+			break ;
+		if (command == "ADD")
+			phonebook.add_contact();
+		else if (command == "SEARCH")
+			phonebook.search_contact();
+		else if (command == "EXIT")
+			break ;
 	}
 	return (0);
 }
