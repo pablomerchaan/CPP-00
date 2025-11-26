@@ -50,7 +50,7 @@ void	Phonebook::search_contact()
 	}
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-	if (choice >= 0 && choice < 8 && !contacts[choice].show_firstname().empty())
+	if (choice >= 0 && choice < 8 && choice < i)
 		contacts[choice].show_contact();
 	else
 		std::cout << "Invalid index!" << std::endl;

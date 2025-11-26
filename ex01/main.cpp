@@ -7,6 +7,7 @@ int	main()
 	Phonebook	phonebook;
 	std::string command;
 
+	std::cout << "You can enter one of three commands, ADD, SEARCH and EXIT" << std::endl;
 	while (true)
 	{
 		if (!getline(std::cin, command))

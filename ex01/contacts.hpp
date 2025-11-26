@@ -13,6 +13,7 @@ private:
 public:
 	Contact();
 	void	setcontact();
+	void	teststrings();
 	void	show_contact();
 	std::string	show_lastname();
 	std::string	show_firstname();
