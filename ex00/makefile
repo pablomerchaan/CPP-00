@@ -4,7 +4,7 @@ NAME = megaphone
 
 RM = rm -rf
 
-CC = g++
+CC = c++
 
 OBJ = $(SRC:.cpp=.o)
 
