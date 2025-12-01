@@ -5,18 +5,61 @@
 
 Contact::Contact() {}
 
+bool tieneContenido(const std::string& s)
+{
+	std::string::size_type i = 0;
+
+    while (i < s.size())
+    {
+        if (!std::isspace(static_cast<unsigned char>(s[i])))
+            return true;
+        ++i;
+    }
+    return false;
+}
+
 void	Contact::setcontact()
 {
 	std::cout << "First Name: ";
 	std::getline(std::cin, firstname);
+	while (firstname.size()	== 0 || !tieneContenido(firstname))
+	{
+		std::cout << "You must fill all the blanks" << std::endl;
+		std::cout << "First Name: ";
+		std::getline(std::cin, firstname);
+	}
 	std::cout << "Last Name: ";
 	std::getline(std::cin, lastname);
+	while (lastname.size()	== 0 || !tieneContenido(lastname))
+	{
+		std::cout << "You must fill all the blanks" << std::endl;
+		std::cout << "Last Name: ";
+		std::getline(std::cin, lastname);
+	}
 	std::cout << "Nickname: ";
 	std::getline(std::cin, nickname);
+	while (nickname.size()	== 0 || !tieneContenido(nickname))
+	{
+		std::cout << "You must fill all the blanks" << std::endl;
+		std::cout << "NickName: ";
+		std::getline(std::cin, nickname);
+	}
 	std::cout << "Phone number: ";
 	std::getline(std::cin, phonenumber);
+	while (phonenumber.size()	== 0 || !tieneContenido(phonenumber))
+	{
+		std::cout << "You must fill all the blanks" << std::endl;
+		std::cout << "Phone number: ";
+		std::getline(std::cin, phonenumber);
+	}
 	std::cout << "Darkest Secret: ";
 	std::getline(std::cin, darkestsecret);
+	while (darkestsecret.size()	== 0 || !tieneContenido(darkestsecret))
+	{
+		std::cout << "You must fill all the blanks" << std::endl;
+		std::cout << "Darkest secret: ";
+		std::getline(std::cin, darkestsecret);
+	}
 	teststrings();
 }
 
