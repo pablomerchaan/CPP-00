@@ -13,6 +13,9 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CPPC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
+%.o: %.cpp
+	$(CPPC) $(CPPFLAGS) -c $< -o $@
+
 clean:
 	rm -f $(OBJ)
 
